@@ -179,20 +179,43 @@ h3 {
 }
 
 .major__icon {
-  width: 340px;
-  height: 340px;
-  font-size: 170px;
-  line-height: 340px;
+  width: 250px;
+  height: 250px;
+  font-size: 130px;
+  line-height: 250px;
   margin: auto;
   color: var(--color-blue);
   border: 1px solid var(--color-blue);
   border-radius: 50px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
+
+.major__icon2 {
+  width: 250px;
+  height: 250px;
+  font-size: 130px;
+  line-height: 270px;
+  margin: auto;
+  color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
 .major__icon i {
   transition: all 300ms ease;
 }
+
+.major__icon2 i {
+  transition: all 300ms ease;
+}
+
 .major__icon:hover i {
+  color: var(--color-mint);
+  transform: scale(120%);
+}
+
+.major__icon2:hover i {
   color: var(--color-mint);
   transform: scale(120%);
 }
