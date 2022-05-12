@@ -85,12 +85,16 @@ h3 {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-mint);
-  color: var(--color-white);
+  background-color: transparent;
+  color: var(--color-black);
   align-items: center;
   padding: 16p;
+  transition: var(--animation-duration) ease-in;
+  z-index: 1;
 }
 
 .navbar__menu {
@@ -123,10 +127,17 @@ h3 {
   color: var(--color-black);
   display: none;
 }
+
+#navbar.navbar--dark {
+  background-color: var(--color-mint);
+
+  color: var(--color-white);
+}
 /* Home */
 #home {
   background: url('imgs/background.png') center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 .home__avatar {
@@ -299,6 +310,26 @@ h3 {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+/* Arrow up */
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  background-color: var(--color-mint);
+  color: var(--color-white);
+  border-radius: 50%;
+  width: 70px;
+  height: 70;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+  pointer-events: none;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
