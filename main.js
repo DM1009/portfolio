@@ -17,7 +17,13 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+});
+
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
 });
 
 const homeContactBtn = document.querySelector('.home__contact');
@@ -43,6 +49,11 @@ document.addEventListener('scroll', () => {
 arrowUp.addEventListener('click', () => {
   scrollIntoView('#home');
 });
+
+const active = document.querySelector('.caregories__btn.selected');
+active.classList.remove('selected');
+const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+target.classList.add('selected');
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
