@@ -226,6 +226,83 @@ h3 {
   font-size: var(--font-small);
 }
 
+/* Skill */
+
+/* .work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project {
+  width: 280;
+  height: 250px;
+  margin: 2px;
+  position: relative;
+  background-color: var(--color-light-white);
+  justify-content: center;
+  align-items: center;
+}
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+} */
+
+.skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.skill__set {
+  width: 280px;
+  height: 280px;
+  line-height: 400px;
+  margin: 2px 0;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.skill__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: var(--color-black);
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skill__description h1 {
+  color: var(--color-mint);
+  opacity: 0.8;
+}
+.skill__set:hover .skill__description {
+  opacity: 0.8;
+  transform: translateY(0);
+}
+
+.skill__description h1::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  transform: translateX(-50%);
+  margin: auto;
+}
+
 /* Work */
 .work__categories {
   margin: 40px;
@@ -398,9 +475,7 @@ h3 {
   .major {
     margin-bottom: 38px;
   }
-  .skillset {
-    flex-direction: column;
-  }
+
   .caregories__btn {
     margin: 4px 0;
     width: 100%;
